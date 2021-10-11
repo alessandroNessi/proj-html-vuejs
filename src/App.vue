@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Nav :navbarHeight="'50px'" />
-    <Header :headerHeight="'50px'" />
+    <Header :headerHeight="'70px'" />
     <Main />
     <Footer />
   </div>

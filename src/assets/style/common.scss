@@ -29,6 +29,23 @@ body{
     max-width: 1200px;
     margin: 0 auto;
 }
+input, button{
+    height: $buttonHeight;
+}
+button{
+    background-color: $blue400;
+    color: $buttonText;
+    border-width: 0;
+    padding: $buttonPadding;
+    line-height: $buttonHeight;
+    vertical-align: middle;
+}
+.rounded{
+    border-radius: calc($buttonHeight / 2);
+}
+input{
+    border-width: 0;
+}
 ul{
     list-style: none;
 }

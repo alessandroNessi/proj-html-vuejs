@@ -6,21 +6,13 @@
 
 <script>
 export default {
-    name: "Banner",
-    props:{
-
-    },
-    data(){
-        return{
-
-        }
-    },
-    methods:{
-        
-    }
-}
+  name: "Banner",
+  props: {},
+  data() {
+    return {};
+  },
+  methods: {},
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

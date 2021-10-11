@@ -6,21 +6,13 @@
 
 <script>
 export default {
-    name: "Main",
-    props:{
-
-    },
-    data(){
-        return{
-
-        }
-    },
-    methods:{
-        
-    }
-}
+  name: "Main",
+  props: {},
+  data() {
+    return {};
+  },
+  methods: {},
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

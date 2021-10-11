@@ -6,19 +6,13 @@
 
 <script>
 export default {
-    name: "Header",
-    props:{
-
-    },
-    data(){
-        return{
-
-        }
-    },
-    methods:{
-        
-    }
-}
+  name: "Header",
+  props: {},
+  data() {
+    return {};
+  },
+  methods: {},
+};
 </script>
 
 <style lang="scss" scoped>

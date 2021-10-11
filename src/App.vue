@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <Nav/>
-    <Header/>
-    <Main/>
-    <Footer/>
+    <Nav :navbarHeight="'50px'" />
+    <Header :headerHeight="'50px'" />
+    <Main />
+    <Footer />
   </div>
 </template>
 
@@ -21,6 +21,10 @@ export default {
     Main,
     Footer,
   },
+  data(){
+    return{
+    }
+  }
 };
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <p>header</p>
+    <p>header <i class="fas fa-glass-martini-alt"></i></p>
   </header>
 </template>
 
@@ -21,6 +21,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import "../assets/style/common.scss";
 </style>

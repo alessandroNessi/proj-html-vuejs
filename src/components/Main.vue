@@ -1,19 +1,20 @@
 <template>
   <main>
-    <SectionInvesting/>
+    <SectionInvesting />
+    <SectionRecent/>
   </main>
 </template>
 
 <script>
-import SectionInvesting from './Main_components/SectionInvesting.vue'
+import SectionInvesting from "./Main_components/SectionInvesting.vue";
+import SectionRecent from "./Main_components/SectionRecent.vue"
 export default {
   name: "Main",
-  components:{
+  components: {
     SectionInvesting,
+    SectionRecent,
   },
-  props: {
-
-  },
+  props: {},
   data() {
     return {};
   },
@@ -21,6 +22,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

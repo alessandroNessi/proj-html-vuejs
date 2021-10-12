@@ -21,10 +21,9 @@ export default {
     Main,
     Footer,
   },
-  data(){
-    return{
-    }
-  }
+  data() {
+    return {};
+  },
 };
 </script>
 

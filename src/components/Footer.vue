@@ -1,7 +1,7 @@
 <template>
-  <button class="button">
-    <p>banner</p>
-  </button>
+  <footer>
+    
+  </footer>
 </template>
 
 <script>

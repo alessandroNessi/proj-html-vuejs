@@ -1,13 +1,19 @@
 <template>
   <main>
-    <p>main</p>
+    <SectionInvesting/>
   </main>
 </template>
 
 <script>
+import SectionInvesting from './Main_components/SectionInvesting.vue'
 export default {
   name: "Main",
-  props: {},
+  components:{
+    SectionInvesting,
+  },
+  props: {
+
+  },
   data() {
     return {};
   },
@@ -15,4 +21,6 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+
+</style>

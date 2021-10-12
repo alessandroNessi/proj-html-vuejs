@@ -55,6 +55,9 @@ export default {
     nav{
         font-size: 14px;
         border-bottom: 1px solid $grey700;
+        .container-l{
+            display: flex;
+        }
         .container-l>*{
             color: $grey900!important;
             width: 50%;

@@ -8,6 +8,26 @@
         </div>
         <img src="../../assets/img/we_proud.png" alt="">
       </div>
+      <div class="newsletter">
+        <div class="container-s">
+          <div class="newsletter_element">
+            <h4>Subscribe our newsletter</h4>
+            <p>There are many bariations of passages of Lorem Ipsum avaible, but the majority have suffered alteration in some fore, by injected humor or randomised words</p>
+          </div>
+          <div class="newsletter_element">
+            <h4>YOUR E-MAIL ADDRESS</h4>
+            <div class="newsletter_subscribe">
+              <input type="mail" placeholder="Enter your E-mail"><button>SUBSCRIBE</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popular_courses">
+        <ProudTitleSub
+        :fontsize="'20'" 
+        :header="`Popular courses`"
+        :paragraph="`Discover our most popular courses for self learning`"/>
+      </div>
       <!-- <ul class="recent_list">
         <li v-for="(element,index) in this.cards" :key="index" class="col-2"><Card :img="element.img" :subtitle="element.subtitle" :title="element.title" :rating="element.rating" :price="element.price" :label="element.label" :feature="element.feature"  /></li>
       </ul> -->
@@ -153,6 +173,37 @@ export default {
     background-color: $grey200;
     display: flex;
     flex-direction: column;
+//newsletter
+    .newsletter{
+      background-color: $green;
+      padding: calc($stdMargin * 2) 0;
+      width: 100%;
+      .container-s{
+        display: flex;
+        .newsletter_element{
+          width: 50%;
+          padding-right: 60px;
+          .newsletter_subscribe{
+            input{
+              width: 50%;
+              padding-left: 20px;
+            }
+          }
+          &:last-child{
+            padding:0;
+          }
+          color: white;
+          h4{
+            font-weight: 600;
+            margin-bottom: $stdMargin;
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+//recap
     .recap{
       height: 450px;
       position: relative;
@@ -176,6 +227,11 @@ export default {
         }
       }
     }
+//popular
+    .popular_courses{
+      padding-top: calc($stdMargin * 4);
+    }
+    .p
     h2{
       font-size: $stdFontSizeTitle;
       font-weight: $stdFontWeightTitle;

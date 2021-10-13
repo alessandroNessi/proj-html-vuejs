@@ -28,21 +28,25 @@
         :header="`Popular courses`"
         :paragraph="`Discover our most popular courses for self learning`"/>
       </div>
-      <!-- <ul class="recent_list">
+      <ul class="popular_list">
         <li v-for="(element,index) in this.cards" :key="index" class="col-2"><Card :img="element.img" :subtitle="element.subtitle" :title="element.title" :rating="element.rating" :price="element.price" :label="element.label" :feature="element.feature"  /></li>
-      </ul> -->
+      </ul>
+      <div class="switch_page">
+        <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-right"></i>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
-// import Card from "./Card.vue";
+import Card from "./Card.vue";
 import ProudTitleSub from "./ProudTitleSub.vue";
 
 export default {
   name: "SectionProud",
   components: {
-    // Card,
+    Card,
     ProudTitleSub,
   },
   data() {
@@ -231,7 +235,13 @@ export default {
     .popular_courses{
       padding-top: calc($stdMargin * 4);
     }
-    .p
+    .popular_list{
+      margin: calc($stdMargin * 3) 0 calc($stdMargin * 2) 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+    }
     h2{
       font-size: $stdFontSizeTitle;
       font-weight: $stdFontWeightTitle;
@@ -242,6 +252,26 @@ export default {
       max-width: 800px;
       text-align: center;
       line-height: 25px;
+    }
+    .switch_page{
+      padding-bottom: calc($stdMargin * 3);
+      .fas{
+        $size:40px;
+        background-color: white;
+        width: $size;
+        text-align: center;
+        line-height: $size;
+        border: 1px solid $grey400;
+        color: $grey400;
+        &:hover{
+          background-color: $gullgray;
+          color: white;
+          transition: 0.1s;
+        }
+      }
+    }
+    .footer{
+      display: flex;
     }
   }
 </style>

@@ -2,24 +2,25 @@
   <div class="frame">
     <div class="card">
       <div class="img_container">
-        <img src="../../assets/img/cat_2-370x155.jpg" alt="">
-        <div class="label">NEW</div>
-        <div class="featured">FEATURED</div>
+        <img :src="require(`../../assets/img/${this.img}`)" :alt="this.title">
+        <div v-if="this.label!==false" :class="`label ${this.label.toLowerCase()}`">{{this.label}}</div>
+        <div v-if="this.feature!==false"  class="featured">FEATURED</div>
       </div>
       <div class="card_description">
-        <p class="subtitle">Apache></p>
-        <p class="title">Web Coding and Apache Basics</p>
+        <p class="subtitle">{{this.subtitle}}></p>
+        <p class="title">{{this.title}}</p>
         <div class="card_footer">
           <div class="rate">
-            <p><i class="fas fa-clock"></i> 6 hours</p>
-            <!-- <p><img src="../../assets/img/starfull.svg" alt=""></p> -->
+            <!-- v-if="this.ratuing.type==`star`" -->
+            <p v-if="this.rating.type=='time'"><i class="fas fa-clock"></i> {{this.rating.value}} hours</p>
+            <p v-else><img v-for="(element, index) in this.rating.value" :key="index" src="../../assets/img/starfull.svg" alt="valuestarfull">{{this.rating.value}}</p>
           </div>
           <div class="price">
-            <p>Free</p>
-            <!-- <div>
-              <p class="discount">$59</p>
-              <p>$49</p>  
-            </div> -->
+            <p v-if="this.price.free" >Free</p>
+            <div v-else>
+              <p v-if="this.price.discount!==''" class="discount">{{this.price.discount}}</p>
+              <p>{{this.price.value}}</p>  
+            </div>
           </div>
         </div>
       </div>
@@ -35,7 +36,7 @@ export default {
     subtitle:String,
     title:String,
     rating: Object,
-    prize: Object,
+    price: Object,
     label: String,
     feature: Boolean
   },
@@ -55,13 +56,16 @@ export default {
     padding: 10px;
     .card{
       overflow: hidden;
-      border: 1px solid $grey300;
+      border: 1px solid $grey400;
       width: 100%;
       height: 100%;
       .img_container{
         height: 50%;
         position: relative;
         overflow: hidden;
+        img{
+          height: 100%;
+        }
         .label, .featured{
           padding: 5px;
           font-size: 12px;
@@ -72,7 +76,15 @@ export default {
           top:10px;
           right: 10px;
           border-radius: 5px;
-          background-color: red;
+        }
+        .new{
+          background-color: $green;
+        }
+        .hot{
+          background-color: $red;
+        }
+        .special{
+          background-color: $golden;
         }
         .featured{
           top: 10px;
@@ -96,7 +108,7 @@ export default {
           color: $blue900;
         }
         .card_footer{
-          border-top: 1px solid $grey300;
+          border-top: 1px solid $grey400;
           color: $blue900;
           padding-top: 10px;
           display: flex;

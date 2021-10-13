@@ -29,6 +29,7 @@ export default {
     }
     .comic{
         $this-font: 16px;
+        color: $blue900;
         h2{
             font-size: calc($this-font * 2.7);
         }

@@ -3,9 +3,18 @@
     <div class="container-s">
       <div class="footer_card">
         <h2 class="margin_std">About</h2>
-        <p><a class="link" href="#">Masterstudy</a> is Education WordPress theme featured by Learning Management System (LMS) for online education.</p>
-        <p class="margin_std">Developed by <a href="#" class="link">StylemyxThemes</a></p>
-        <p class="comments"><a href="#"><i class="fab fa-facebook"></i></a><a href="#"><i class="fab fa-twitter"></i></a><a href="#"><i class="fab fa-instagram"></i></a></p>
+        <p>
+          <a class="link" href="#">Masterstudy</a> is Education WordPress theme
+          featured by Learning Management System (LMS) for online education.
+        </p>
+        <p class="margin_std">
+          Developed by <a href="#" class="link">StylemyxThemes</a>
+        </p>
+        <p class="comments">
+          <a href="#"><i class="fab fa-facebook"></i></a
+          ><a href="#"><i class="fab fa-twitter"></i></a
+          ><a href="#"><i class="fab fa-instagram"></i></a>
+        </p>
       </div>
       <div class="footer_card">
         <h2 class="margin_std">Contact</h2>
@@ -32,16 +41,26 @@
       <div class="footer_card">
         <h2 class="margin_std">Blog</h2>
         <div class="blog_miniature">
-          <img src="../assets/img/photo-1517520287167-4bbf64a00d66-75x75.jpeg" alt="">
+          <img
+            src="../assets/img/photo-1517520287167-4bbf64a00d66-75x75.jpeg"
+            alt=""
+          />
           <div>
-            <h4 class="title">Our main target is to "Developing Yourself as a Leader"</h4>
+            <h4 class="title">
+              Our main target is to "Developing Yourself as a Leader"
+            </h4>
             <p class="date">August 9,2018</p>
           </div>
         </div>
         <div class="blog_miniature">
-          <img src="../assets/img/photo-1490376840453-5f616fbebe5b-50x50.jpeg" alt="">
+          <img
+            src="../assets/img/photo-1490376840453-5f616fbebe5b-50x50.jpeg"
+            alt=""
+          />
           <div>
-            <h4 class="title">Those Other College Expenses You Aren' t Thinking About</h4>
+            <h4 class="title">
+              Those Other College Expenses You Aren' t Thinking About
+            </h4>
             <p class="date">June 3,2015</p>
           </div>
         </div>
@@ -53,8 +72,7 @@
 <script>
 export default {
   name: "Footer",
-  props: {
-  },
+  props: {},
 };
 </script>
 
@@ -62,31 +80,31 @@ export default {
 $footerFontSize: 12px;
 $stdMargin: 20px;
 @import "../assets/style/common.scss";
-footer{
+footer {
   margin: 50px 0;
-  .margin_std{
+  .margin_std {
     margin-bottom: $stdMargin;
   }
-  .container-s{
+  .container-s {
     display: flex;
-    .footer_card{
-      .blog_miniature{
+    .footer_card {
+      .blog_miniature {
         $imgHeight: 60px;
         height: $imgHeight;
         display: flex;
         margin-bottom: calc($stdMargin / 2);
-        img{
+        img {
           height: 100%;
           width: $imgHeight;
           margin-right: 20px;
         }
-        h4{
+        h4 {
           color: $grey700;
         }
-        .date{
+        .date {
           color: $grey400;
           // margin-left: 2px;
-          &:before{
+          &:before {
             content: "";
             width: 15px;
             transform: translate(0, -5px);
@@ -95,35 +113,35 @@ footer{
           }
         }
       }
-      .lists{
+      .lists {
         display: flex;
-        ul{
+        ul {
           list-style: disc;
           width: 50%;
-          li{
+          li {
             margin-bottom: calc($stdMargin / 2);
             color: $blue900;
           }
         }
       }
       margin-right: 20px;
-      &:last-child{
+      &:last-child {
         margin-right: 0;
       }
       width: 25%;
       font-size: $footerFontSize;
-      p{
+      p {
         color: $blue900;
       }
-      a.link{
+      a.link {
         color: $blue400;
       }
-      img{
+      img {
         width: 33%;
       }
-      .comments{
+      .comments {
         color: $grey700;
-        .fab{
+        .fab {
           font-size: 20px;
           margin-right: 15px;
         }

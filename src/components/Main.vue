@@ -1,10 +1,10 @@
 <template>
   <main>
     <SectionInvesting />
-    <SectionRecent/>
-    <SectionProud/>
-    <SectionChoice/>
-    <SectionCredits/>
+    <SectionRecent />
+    <SectionProud />
+    <SectionChoice />
+    <SectionCredits />
   </main>
 </template>
 

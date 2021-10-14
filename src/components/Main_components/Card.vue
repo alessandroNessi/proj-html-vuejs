@@ -11,8 +11,7 @@
         <p class="title">{{this.title}}</p>
         <div class="card_footer">
           <div class="rate">
-            <!-- v-if="this.ratuing.type==`star`" -->
-            <p v-if="this.rating.type=='time'"><i class="fas fa-clock"></i> {{this.rating.value}} hours</p>
+            <p v-if="this.rating.type=='time'"><i class="far fa-clock"></i> {{this.rating.value}} hours</p>
             <p v-else><img v-for="(element, index) in this.rating.value" :key="index" src="../../assets/img/starfull.svg" alt="valuestarfull">{{this.rating.value}}</p>
           </div>
           <div class="price">

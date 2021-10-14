@@ -13,7 +13,7 @@ export default {
     header: String,
     paragraph: String,
     button: String,
-    fontsize: String,
+    fontsize: Number,
   },
   data() {
     return {};

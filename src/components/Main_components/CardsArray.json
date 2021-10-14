@@ -10,7 +10,7 @@
       "price": {
         "free": true
         },
-      "label": false,
+      "label": "false",
       "feature": false
     },
     {
@@ -72,7 +72,7 @@
         "discount": "",
         "value": ""
         },
-      "label": false,
+      "label": "false",
       "feature": false
     },
     {
@@ -88,7 +88,7 @@
         "discount": "",
         "value": "$70"
         },
-      "label": false,
+      "label": "false",
       "feature": false
     },
     {
@@ -104,7 +104,7 @@
         "discount": "",
         "value": "$20"
         },
-      "label": false,
+      "label": "false",
       "feature": false
     },
     {
@@ -120,7 +120,7 @@
         "discount": "",
         "value": "$60"
         },
-      "label": false,
+      "label": "false",
       "feature": false
     },
     {
@@ -136,7 +136,7 @@
         "discount": "",
         "value": "$79"
         },
-      "label": false,
+      "label": "false",
       "feature": false
     },
     {
@@ -178,7 +178,7 @@
       "price": {
         "free": true
         },
-      "label": false,
+      "label": "false",
       "feature": false
     }
 ]

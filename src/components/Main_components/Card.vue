@@ -4,7 +4,7 @@
       <div class="img_container">
         <img :src="require(`../../assets/img/${this.img}`)" :alt="this.title" />
         <div
-          v-if="this.label !== false"
+          v-if="this.label != `false`"
           :class="`label ${this.label.toLowerCase()}`"
         >
           {{ this.label }}

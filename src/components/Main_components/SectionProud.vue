@@ -105,7 +105,6 @@ export default {
   },
   methods: {
     nextCourse() {
-      console.log("next");
       if (this.i + 1 < this.CardsArray.length) {
         this.cards = [];
         let temp = this.i + 6;
@@ -116,7 +115,6 @@ export default {
       }
     },
     prevCourse() {
-      console.log("prev");
       if (this.i > 11) {
         this.cards = [];
         let temp = this.i - 6;

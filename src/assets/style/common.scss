@@ -38,6 +38,13 @@ button{
     line-height: $buttonHeight;
     vertical-align: middle;
     cursor: pointer;
+    transition: 0.1s;
+}
+.hover-size:hover{
+    transform: scale(1.15);
+}
+.hover-green:hover button{
+    background-color: $green;
 }
 .rounded{
     border-radius: calc($buttonHeight / 2);

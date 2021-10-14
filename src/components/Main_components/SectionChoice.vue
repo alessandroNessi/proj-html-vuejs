@@ -2,11 +2,11 @@
     <div class="container-l">
         <div class="choice-card">
             <img src="../../assets/img/image_box_1-221x231.png" alt="instructor">
-            <HPB :fontsize="14" :header="`Become an Instructor`" :paragraph="`Teach what you love. Masterstudy gives you the tools to create a course.`" :button="`START TEACHING`"/>
+            <HPB class="hover-green" :fontsize="14" :header="`Become an Instructor`" :paragraph="`Teach what you love. Masterstudy gives you the tools to create a course.`" :button="`START TEACHING`"/>
         </div>
         <div class="choice-card">
             <img src="../../assets/img/image_box_2-234x231.png" alt="business">
-            <HPB :fontsize="14" :header="`Setup for Business`" :paragraph="`Get unlimited access to 2,500 of Udemy's top courses for your team.`" :button="`START TEACHING`"/>
+            <HPB class="hover-green" :fontsize="14" :header="`Setup for Business`" :paragraph="`Get unlimited access to 2,500 of Udemy's top courses for your team.`" :button="`START BUSINESS`"/>
         </div>
     </div>
 </template>

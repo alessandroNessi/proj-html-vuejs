@@ -23,7 +23,7 @@
       <a class="subtitle blue"
         ><i class="blue far fa-user"></i><span class="blue"> Log In</span></a
       >
-      <button class="rounded"><h4>SIGN UP</h4></button>
+      <button class="hover-size rounded"><h4>SIGN UP</h4></button>
       <a href="#"><i class="blue far fa-bookmark"></i></a>
     </div>
   </header>

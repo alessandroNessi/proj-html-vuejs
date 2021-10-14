@@ -32,8 +32,8 @@
         <li v-for="(element,index) in this.cards" :key="index" class="col-2"><Card :img="element.img" :subtitle="element.subtitle" :title="element.title" :rating="element.rating" :price="element.price" :label="element.label" :feature="element.feature"  /></li>
       </ul>
       <div class="switch_page">
-        <i class="fas fa-chevron-left"></i>
-        <i class="fas fa-chevron-right"></i>
+        <i @click="prevCourse()" class="fas fa-chevron-left"></i>
+        <i @click="nextCourse()" class="fas fa-chevron-right"></i>
       </div>
     </div>
   </section>
@@ -42,6 +42,7 @@
 <script>
 import Card from "./Card.vue";
 import ProudTitleSub from "./ProudTitleSub.vue";
+import CardsArray from "./CardsArray.json";
 
 export default {
   name: "SectionProud",
@@ -69,102 +70,39 @@ export default {
           paragraph:"COUNTRIES REACHED",
         },
       ],
-      cards: [
-        {
-          img:"photo-1461749280684-dccba630e2f6-544x322.jpeg",
-          subtitle: "Apache",
-          title: "Web Coding and Apache Basics",
-          rating:{
-            type: "time",
-            value: 6,
-          },
-          price:{
-            free:true,
-          },
-          label:false,
-          feature: false,
-        },
-        {
-          img:"cat_2-544x322.jpg",
-          subtitle: "Art",
-          title: "Real Things Art Painting by Jason Ni",
-          rating:{
-            type: "time",
-            value: 6,
-          },
-          price:{
-            free:false,
-            discount:"$60",
-            value:"$45"
-          },
-          label:"NEW",
-          feature: true,
-        },
-        {
-          img:"course-preview-544x322.jpg",
-          subtitle: "Software Development",
-          title: "Basics of Masterstudy",
-          rating:{
-            type: "star",
-            value: 5,
-          },
-          price:{
-            free:true,
-          },
-          label:"HOT",
-          feature: false,
-        },
-        {
-          img:"photo-1496307042754-b4aa456c4a2d-544x322.jpeg",
-          subtitle: "Electronic",
-          title: "How to be a DJ? Make Electronic Music",
-          rating:{
-            type: "star",
-            value: 5,
-          },
-          price:{
-            free:false,
-            discount:"$59",
-            value:"$49"
-          },
-          label:"SPECIAL",
-          feature: false,
-        },
-        {
-          img:"photo-1416339134316-0e91dc9ded92-scaled-544x322.jpeg",
-          subtitle: "Comunication",
-          title: "Design Instruments for Communication",
-          rating:{
-            type: "time",
-            value: 6,
-          },
-          price:{
-            free:false,
-            discount:"",
-            value:""
-          },
-          label: false,
-          feature: false,
-        },
-        {
-          img:"cathryn-lavery-67852-unsplash-544x322.jpg",
-          subtitle: "Art",
-          title: "Make Your Concepr Right and Beautiful",
-          rating:{
-            type: "time",
-            value: 6,
-          },
-          price:{
-            free:false,
-            discount:"",
-            value:"$70"
-          },
-          label: false,
-          feature: false,
-        }
-      ],
+      cards: [],
+      CardsArray:CardsArray,
+      i:0,
     }
   },
+  methods:{
+    nextCourse(){
+      console.log("next");
+      if(this.i+1<this.CardsArray.length){
+        this.cards=[];
+        let temp=this.i+6;
+        while(this.i<temp){
+          this.cards.push(this.CardsArray[this.i]);
+          this.i++;
+        }
+      }
+    },
+    prevCourse(){
+      console.log("prev");
+      if(this.i>11){
+        this.cards=[];
+        let temp=this.i-6;
+        this.i-=12;
+        while(this.i<temp){
+          this.cards.push(this.CardsArray[this.i]);
+          this.i++;
+        }
+      }
+    },
+  },
+  mounted(){
+    this.nextCourse();
+  }
 };
 </script>
 
